@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>蓝桥杯基础篇</title>
+      <link href="/2022/01/15/lan-qiao-bei-ji-chu-pian/"/>
+      <url>/2022/01/15/lan-qiao-bei-ji-chu-pian/</url>
+      
+        <content type="html"><![CDATA[<ul><li>了解eda赛项</li><li>元件符号与子库</li><li>封装设计</li></ul><h3 id="了解eda赛项"><a href="#了解eda赛项" class="headerlink" title="了解eda赛项"></a>了解eda赛项</h3><p> 客观题 30%<br> 电子线路设计题 70%</p><h4 id="试题范围"><a href="#试题范围" class="headerlink" title="试题范围"></a>试题范围</h4><ul><li>数字、模拟电路基础知识</li><li>电子元器件参数与选型</li><li>原理图识图</li><li>原理图和pcb绘制</li><li>原理图设计环境参数设置</li><li>pcb设计环境参数和设计规则设置</li><li>设计规则检查</li><li>工程文件输出<h3 id="元件符号与子库"><a href="#元件符号与子库" class="headerlink" title="元件符号与子库"></a>元件符号与子库</h3><h4 id="编号"><a href="#编号" class="headerlink" title="编号"></a>编号</h4>芯片类编号U、晶体管编号Q、电阻编号R、二极管编号D<h3 id="封装设计"><a href="#封装设计" class="headerlink" title="封装设计"></a>封装设计</h3><h4 id="0805"><a href="#0805" class="headerlink" title="0805"></a>0805</h4>焊盘一般画在顶层或者底层，外框的黄色线条为顶层丝印<br><img src="https://img-blog.csdnimg.cn/53a97e98540245059d9a0bf2a4804e7b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5pG46bG85bim5biI5bCP5byf,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>  智能尺寸工具<br><img src="https://img-blog.csdnimg.cn/f78c56a8e3a04c258739ccfeb8afcdb2.png" alt="在这里插入图片描述"><pre><code> 通孔用于固定元件，在绘制时可以通过修改其中心坐标来与其他焊盘对其，此外也可以通过放置焊盘的方式来确定通孔所在的大致位置</code></pre><img src="https://img-blog.csdnimg.cn/25933b251bcb42d7a09d8b7624369668.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5pG46bG85bim5biI5bCP5byf,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>在使用智能尺寸工具时，最后一个选择的元件根据所设定的距离进行移动<br><img src="https://img-blog.csdnimg.cn/cc61f5e599994748b4bfaf0647b2941e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5pG46bG85bim5biI5bCP5byf,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+            <tag> 立创eda </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>我的第一篇博客</title>
       <link href="/2022/01/07/wo-de-di-yi-pian-bo-ke/"/>
       <url>/2022/01/07/wo-de-di-yi-pian-bo-ke/</url>
@@ -20,9 +47,9 @@
       
         <tags>
             
-            <tag> 卷王耿 </tag>
-            
             <tag> Markdown </tag>
+            
+            <tag> 卷王耿 </tag>
             
         </tags>
       
@@ -47,9 +74,9 @@
       
         <tags>
             
-            <tag> Markdown </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> Markdown </tag>
             
         </tags>
       

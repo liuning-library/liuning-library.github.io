@@ -6,7 +6,7 @@
   <link href="https://liuning-library.github.io/atom.xml" rel="self"/>
   
   <link href="https://liuning-library.github.io/"/>
-  <updated>2022-01-18T09:41:31.470Z</updated>
+  <updated>2022-01-19T02:49:40.275Z</updated>
   <id>https://liuning-library.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>蓝桥杯基础篇</title>
+    <link href="https://liuning-library.github.io/2022/01/15/lan-qiao-bei-ji-chu-pian/"/>
+    <id>https://liuning-library.github.io/2022/01/15/lan-qiao-bei-ji-chu-pian/</id>
+    <published>2022-01-15T11:25:00.000Z</published>
+    <updated>2022-01-19T02:49:40.275Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;了解eda赛项&lt;/li&gt;
+&lt;li&gt;元件符号与子库&lt;/li&gt;
+&lt;li&gt;封装设计&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;了解eda赛项&quot;&gt;&lt;a href=&quot;#了解eda赛项&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Markdown" scheme="https://liuning-library.github.io/categories/Markdown/"/>
+    
+    
+    <category term="Markdown" scheme="https://liuning-library.github.io/tags/Markdown/"/>
+    
+    <category term="立创eda" scheme="https://liuning-library.github.io/tags/%E7%AB%8B%E5%88%9Beda/"/>
+    
+  </entry>
   
   <entry>
     <title>我的第一篇博客</title>
@@ -37,9 +69,9 @@
     <category term="Markdown" scheme="https://liuning-library.github.io/categories/Markdown/"/>
     
     
-    <category term="卷王耿" scheme="https://liuning-library.github.io/tags/%E5%8D%B7%E7%8E%8B%E8%80%BF/"/>
-    
     <category term="Markdown" scheme="https://liuning-library.github.io/tags/Markdown/"/>
+    
+    <category term="卷王耿" scheme="https://liuning-library.github.io/tags/%E5%8D%B7%E7%8E%8B%E8%80%BF/"/>
     
   </entry>
   
@@ -64,9 +96,9 @@
     <category term="Markdown" scheme="https://liuning-library.github.io/categories/Markdown/"/>
     
     
-    <category term="Markdown" scheme="https://liuning-library.github.io/tags/Markdown/"/>
-    
     <category term="Hexo" scheme="https://liuning-library.github.io/tags/Hexo/"/>
+    
+    <category term="Markdown" scheme="https://liuning-library.github.io/tags/Markdown/"/>
     
   </entry>
   
