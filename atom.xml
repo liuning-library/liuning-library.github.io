@@ -128,9 +128,9 @@
     <category term="Markdown" scheme="https://liuning-library.github.io/categories/Markdown/"/>
     
     
-    <category term="Markdown" scheme="https://liuning-library.github.io/tags/Markdown/"/>
-    
     <category term="电子制作" scheme="https://liuning-library.github.io/tags/%E7%94%B5%E5%AD%90%E5%88%B6%E4%BD%9C/"/>
+    
+    <category term="Markdown" scheme="https://liuning-library.github.io/tags/Markdown/"/>
     
   </entry>
   
@@ -182,9 +182,9 @@
     <category term="Markdown" scheme="https://liuning-library.github.io/categories/Markdown/"/>
     
     
-    <category term="Hexo" scheme="https://liuning-library.github.io/tags/Hexo/"/>
-    
     <category term="Markdown" scheme="https://liuning-library.github.io/tags/Markdown/"/>
+    
+    <category term="Hexo" scheme="https://liuning-library.github.io/tags/Hexo/"/>
     
   </entry>
   
