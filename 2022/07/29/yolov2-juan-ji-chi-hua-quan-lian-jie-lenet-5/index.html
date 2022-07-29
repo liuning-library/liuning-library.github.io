@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="我的第一篇博客, Hexo">
+    <meta name="keywords" content="Yolov2-Yolo9000:Better、faster、stronger, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>我的第一篇博客 | Hexo</title>
+    <title>Yolov2-Yolo9000:Better、faster、stronger | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">我的第一篇博客</h1>
+                    <h1 class="description center-align post-title">Yolov2-Yolo9000:Better、faster、stronger</h1>
                 </div>
             </div>
         </div>
@@ -344,8 +344,8 @@
                                 <span class="chip bg-color">Markdown</span>
                             </a>
                         
-                            <a href="/tags/%E5%8D%B7%E7%8E%8B%E8%80%BF/">
-                                <span class="chip bg-color">卷王耿</span>
+                            <a href="/tags/yolo/">
+                                <span class="chip bg-color">yolo</span>
                             </a>
                         
                     </div>
@@ -369,7 +369,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-01-07
+                    2022-07-29
                 </div>
                 
 
@@ -393,10 +393,40 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="内容：耿哥6666666"><a href="#内容：耿哥6666666" class="headerlink" title="内容：耿哥6666666"></a>内容：耿哥6666666</h3><pre><code>今天耿哥开始偷学线代，咱也不知道学的是啥，还看不懂，只能为耿哥扣666
-</code></pre>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/79s36A"><img src="https://s4.ax1x.com/2022/01/07/79s36A.jpg" alt="79s36A.jpg"></a></p>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2>
+                <h2 id="yolov2的改进-better"><a href="#yolov2的改进-better" class="headerlink" title="yolov2的改进 better"></a>yolov2的改进 better</h2><h3 id="emsp-yolov2的损失函数"><a href="#emsp-yolov2的损失函数" class="headerlink" title=" yolov2的损失函数"></a> yolov2的损失函数</h3><h3 id="emsp-细粒度特征"><a href="#emsp-细粒度特征" class="headerlink" title=" 细粒度特征"></a> 细粒度特征</h3><h2 id="卷积"><a href="#卷积" class="headerlink" title="卷积"></a>卷积</h2><h3 id="emsp-单通道卷积"><a href="#emsp-单通道卷积" class="headerlink" title=" 单通道卷积"></a> 单通道卷积</h3><h3 id="emsp-多通道卷积"><a href="#emsp-多通道卷积" class="headerlink" title=" 多通道卷积"></a> 多通道卷积</h3><h3 id="emsp-卷积的作用"><a href="#emsp-卷积的作用" class="headerlink" title=" 卷积的作用"></a> 卷积的作用</h3><h2 id="池化层与全连接层"><a href="#池化层与全连接层" class="headerlink" title="池化层与全连接层"></a>池化层与全连接层</h2><h3 id="emsp-池化层"><a href="#emsp-池化层" class="headerlink" title=" 池化层"></a> 池化层</h3><h3 id="emsp-全连接层"><a href="#emsp-全连接层" class="headerlink" title=" 全连接层"></a> 全连接层</h3><h3 id="emsp-LeNet-5"><a href="#emsp-LeNet-5" class="headerlink" title=" ## LeNet-5"></a> ## LeNet-5</h3><h2 id="yolov1算法"><a href="#yolov1算法" class="headerlink" title="yolov1算法"></a>yolov1算法</h2><p><img src="https://img-blog.csdnimg.cn/7747e85ef2334b70aa9c62b365e7a26e.png"><img src="https://img-blog.csdnimg.cn/c425613f0ffa4235be36894a7fa691f2.png"></p>
+<p>yolov1算法把一个图片分成7x7个网格，每个网格预测B个bounding box(边界框)。</p>
+<ul>
+<li><p>训练阶段<br> 目标物体的人工标注框的中心点落在哪个网格里面，就由哪个网格预测出的Bounding box中的一个负责拟合预测目标（与人工标注框IOU最大的负责）<br> 每个网格预测出每个类别的概率，通过后处理，nms非极大值抑制，得到最终的预测框</p>
+</li>
+<li><p>测试阶段<br> <br>输入待预测图片获得输出数组（sxsx(5xB+C)）5代表x,y,h,w,c  xy表示中心点坐标，c表示置信度</p>
+</li>
+<li><p>注释<br>由于yolov1将图片划分成7x7，且每个网格只能预测一个物体，导致其检查小物体、密集物体的能力比较差<br><img src="https://img-blog.csdnimg.cn/7ba7a78d683f4705ae4fb73eaa25dd64.png"></p>
+<h2 id="yolov2的改进-better-1"><a href="#yolov2的改进-better-1" class="headerlink" title="yolov2的改进  better"></a>yolov2的改进  better</h2></li>
+<li><p>Batch  Normalization<br><img src="https://img-blog.csdnimg.cn/a9ba1da996b745bf9814b806f0dcdb59.png"><br>神经元的输出非常分散，通过BN层处理后将其变成以0为均值，标准差为1的分布，将神经元的输出集中到0附近。这是因为我们所使用的sigmoid的激活函数，在0附近是非饱和区，在远小于0或大于0的区域陷入饱和区，甚至梯度消失，不利于训练<br><img src="https://img-blog.csdnimg.cn/ac94cf2094b645e88335cb8c1e7f24e0.png"><br><img src="https://img-blog.csdnimg.cn/df360cba128f45c6a378e80ae50111bf.png"><br><img src="https://img-blog.csdnimg.cn/43959a387f9445ecbbca997bae0f4842.png"><br>每个神经元对每一行的数据进行BN操作，先求出均值、标准差；用每一个输出都-均值/标注差，得到以下结果，所有神经元的响应输出都变到0附近<br><img src="https://img-blog.csdnimg.cn/e420ce8e51ee440e95515d14d1467388.png"><br>得到的结果再乘以γ并加上β，就得到BN输出之后的结果<br><img src="https://img-blog.csdnimg.cn/c25019853aec4d61a7cf7eb262ffd4b1.png"><br>BN层一般位于线性层的后面，激活层的前面</p>
+</li>
+<li><p>High  Resolution Classifier 高分辨率的分类器</p>
+</li>
+<li><p>Anchor   Dimension  Clusters   Direct location prediction<br><img src="https://img-blog.csdnimg.cn/8233b4e9676f471a8ec89a7fffaa0b19.png"><br>在yolov1中生成的bounding box是随机生成的，在yolov2中给其设定一个初始参考框，也叫先验框，也即框的长宽比是固定的。每个预测框预测出相较于anchor的偏移量<br><img src="https://img-blog.csdnimg.cn/894c4fbe79014ec39f13bba8295923e9.png"><br>在yolov2中将每个图片分成13x13个网格，每个网格有5种不同尺寸的anchor，在预测时，同样选取IOU最大的anchor,此时只需要获得anchor相较于标注框的偏移量即可<br><img src="https://img-blog.csdnimg.cn/eacadb28873845d8b793f9dff78e0569.png"><br>yolov2的输出也发生了变换，对于每个网格都有5个anchor，每个anchor都会预测类别概率，所以一个网格产生5x(4+1+20)=5x25=125个数<br><img src="https://img-blog.csdnimg.cn/5d79dc1635fa456cae94d37a22676caa.png"><br>所以输入的是一张图像，输出的是三维张量   图片输入大小是13的倍数，即416x416，也可以是其他倍数<br>yolov2中的anchor由K-means聚类的方法选择，<br><img src="https://img-blog.csdnimg.cn/604a41d3296d49c3a5775500b357eaaa.png"><br>tx ty是模型输出的相比于anchor的偏移量，通过sigmoid函数将其输出范围限定0到1之间，因此模型输出的预测框的中心点只能在网格中滑动，不会出现全图乱跑的情况</p>
+</li>
+<li><h3 id="yolov2的损失函数"><a href="#yolov2的损失函数" class="headerlink" title="yolov2的损失函数"></a>yolov2的损失函数</h3><p><img src="https://img-blog.csdnimg.cn/295bc61bdb114d86996b5a4c7691d4f9.png"></p>
+</li>
+<li><h3 id="细粒度特征"><a href="#细粒度特征" class="headerlink" title="细粒度特征"></a>细粒度特征</h3><p><img src="https://img-blog.csdnimg.cn/52ff214f0ab04fc89bf90e1e2ef9dfba.png"><br>对feather map进行拆解，一路拆解，拆解后通道数增加，一路正常下采样卷积，两路数据再进行叠加，这样得到的新feather map就包含了底层的细粒度信息，以及经过卷积之后高层的信息<br><img src="https://img-blog.csdnimg.cn/1dbb4e84b9aa421f9c44fb39b39df1de.png"><br><img src="https://img-blog.csdnimg.cn/78593eee137b45849f53176d51f9415f.png"></p>
+<h2 id="卷积-1"><a href="#卷积-1" class="headerlink" title="卷积"></a>卷积</h2></li>
+<li><h3 id="单通道卷积"><a href="#单通道卷积" class="headerlink" title="单通道卷积"></a>单通道卷积</h3><p><img src="https://img-blog.csdnimg.cn/29631c1d6cc44b61947f6b3856af44e9.png"><br>绿色的地方称为感受野，卷积核在输入图像上进行滑动，每一个卷积核对应一个卷积输出<br><img src="https://img-blog.csdnimg.cn/87484918331f422eae4b0207ee480ab0.png"><br>通过padding 对输入图像进行补零，使得图像边缘的数据参与卷积的次数与其他地方的次数相同</p>
+</li>
+<li><h3 id="多通道卷积"><a href="#多通道卷积" class="headerlink" title="多通道卷积"></a>多通道卷积</h3><p><img src="https://img-blog.csdnimg.cn/df36291a4a124f77bfce6433d2f001e1.png"><br>多维度卷积示意图，多维度卷积后得到的仍然是一张图片</p>
+</li>
+<li><h3 id="卷积的作用"><a href="#卷积的作用" class="headerlink" title="卷积的作用"></a>卷积的作用</h3><p><img src="https://img-blog.csdnimg.cn/d341190f1f2a465a9005587a2a01ba68.png"><br>把原图中符合卷积核特征的特征提取出来，用卷积核对图像的底层特征进行抽取，卷积神经网络学习如何设置卷积核</p>
+</li>
+</ul>
+<h2 id="池化层与全连接层-1"><a href="#池化层与全连接层-1" class="headerlink" title="池化层与全连接层"></a>池化层与全连接层</h2><ul>
+<li><h3 id="池化层"><a href="#池化层" class="headerlink" title="池化层"></a>池化层</h3></li>
+</ul>
+<p> 当卷积核非常多时，我们卷积之后得到参数数据维度也非常的庞大 ，所以为了降低数据维度，并防止过拟合，通过池化层完成此操作<br><img src="https://img-blog.csdnimg.cn/a4481f801b8345478bba4608e0cfc088.png"><br>我们选取大框框起来的数值中的平均值称为平均池化，选取最大值，称为最大池化。池化也称为下采样  pooling  一般用的比较多的是最大池化。池化可以<strong>减少参数量、防止过拟合</strong></p>
+<ul>
+<li><h3 id="全连接层"><a href="#全连接层" class="headerlink" title="全连接层"></a>全连接层</h3>全连接神经网络是全连接的每一层都是和上一层的所有神经元相连，形成密集连接。全连接层用于汇中卷积/前面神经元提取到的信息<br><img src="https://img-blog.csdnimg.cn/7d17e17356e34dc9a04baec0493caf27.png"><h2 id="LeNet-5"><a href="#LeNet-5" class="headerlink" title="LeNet-5"></a>LeNet-5</h2><img src="https://img-blog.csdnimg.cn/b0b0b8c54405415086712611cff23985.png"><br><img src="https://img-blog.csdnimg.cn/167fe33d2454401eb538231505971935.png"><br><img src="https://img-blog.csdnimg.cn/f932dffd641045698c3c4b390df297be.png"></li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -422,7 +452,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://liuning-library.github.io/2022/01/07/wo-de-di-yi-pian-bo-ke/">https://liuning-library.github.io/2022/01/07/wo-de-di-yi-pian-bo-ke/</a>
+                    <a href="https://liuning-library.github.io/2022/07/29/yolov2-juan-ji-chi-hua-quan-lian-jie-lenet-5/">https://liuning-library.github.io/2022/07/29/yolov2-juan-ji-chi-hua-quan-lian-jie-lenet-5/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -464,8 +494,8 @@
                                     <span class="chip bg-color">Markdown</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8D%B7%E7%8E%8B%E8%80%BF/">
-                                    <span class="chip bg-color">卷王耿</span>
+                                <a href="/tags/yolo/">
+                                    <span class="chip bg-color">yolo</span>
                                 </a>
                             
                         </div>
@@ -635,29 +665,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/01/07/holocubic-shou-huan/">
+                <a href="/2022/07/29/yolov2-juan-ji-chi-hua-quan-lian-jie-lenet-5/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="holocubic 手环">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Yolov2-Yolo9000:Better、faster、stronger">
                         
-                        <span class="card-title">holocubic 手环</span>
+                        <span class="card-title">Yolov2-Yolo9000:Better、faster、stronger</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            关于第一次制作手环的记录
+                            关于yolov2、卷积、池化、全连接、lenet-5的初步认知
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -670,6 +701,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -677,8 +709,8 @@
                         <span class="chip bg-color">Markdown</span>
                     </a>
                     
-                    <a href="/tags/%E7%94%B5%E5%AD%90%E5%88%B6%E4%BD%9C/">
-                        <span class="chip bg-color">电子制作</span>
+                    <a href="/tags/yolo/">
+                        <span class="chip bg-color">yolo</span>
                     </a>
                     
                 </div>
@@ -692,24 +724,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/01/07/hello-world/">
+                <a href="/2022/07/25/yan-jun-chao-xue-chang-jing-yan-fen-xiang-fang-fa-lun/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="hexo个人博客搭建">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="闫俊超学长经验分享——方法论">
                         
-                        <span class="card-title">hexo个人博客搭建</span>
+                        <span class="card-title">闫俊超学长经验分享——方法论</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在windows环境下使用git bash快速搭建hexo博客
+                            学长求职经验分享、方法论以及个人总结
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-25
                             </span>
                         <span class="publish-author">
                             
@@ -726,12 +758,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
                     <a href="/tags/Markdown/">
                         <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%90%91%E4%BC%98%E7%A7%80%E7%9A%84%E4%BA%BA%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">向优秀的人学习</span>
                     </a>
                     
                 </div>
